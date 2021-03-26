@@ -14,7 +14,7 @@ echo Using EPH_HELM_CHART_VERSION $EPH_HELM_CHART_VERSION
 echo "::set-output name=eph_docker_tag::$EPH_DOCKER_TAG"
 echo "::set-output name=eph_helm_app_version::$EPH_HELM_APP_VERSION"
 echo "::set-output name=eph_helm_chart_version::$EPH_HELM_CHART_VERSION"
-      
+
 PACKAGE=`yq e .template.package helm.yaml`
 helm repo add remote-repo $REPO_URL --username $REPO_USER --password $REPO_PASS && helm repo update
 helm fetch remote-repo/${PACKAGE} --version `yq e '.template.version //0'  helm.yaml`
