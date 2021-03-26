@@ -28,4 +28,4 @@ outputs:
 runs:
   using: docker
   image: docker://894939414795.dkr.ecr.eu-west-1.amazonaws.com/docker-infra:v1.18.0
-  args: [ "bash", "-c", "ARTIFACT_NAME=\"${{ inputs.artifact_name }}\" "REPO_URL=\"${{ inputs.helm_repo_url }}\" REPO_USER=\"${{ inputs.helm_repo_username }}\" REPO_PASS=\"${{ inputs.helm_repo_password }}\" ./.github/actions/vault-read/main.sh "]
+  args: [ "bash", "-c", "ARTIFACT_NAME=\"${{ inputs.artifact_name }}\" REPO_URL=\"${{ inputs.helm_repo_url }}\" REPO_USER=\"${{ inputs.helm_repo_username }}\" REPO_PASS=\"${{ inputs.helm_repo_password }}\" ./.github/actions/vault-read/main.sh "]
